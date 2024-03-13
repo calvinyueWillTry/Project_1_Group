@@ -1,0 +1,1 @@
+Our app will be based around being able to search up a pokemon and having their stats and picture pop up with any other applicable info. It will run seamlessly in the browser, and feature dynamic HTML & CSS powered by JavaScript. 
