@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.scss">
 </head>
 <body>
     <audio controls autoplay loop>
-        <source type="audio/mpeg" src="./Pokemon Stream.Battle Music.mp3">
+        <source type="audio/mpeg" src="./sfx/battle.mp3">
     </audio>
 <!--<iframe src="./Pokemon Stream.Battle Music.mp3" allow="autoplay" style="display:flexbox" type="audio/mp3" id="iframeAudio">
     </iframe>-->
@@ -20,8 +21,8 @@
     </header>
     <nav>
     <!--<p> <li><a href="#Bio-about-me"> About Me </a></li>-->
-        <p> <li> <a href="https://github.com/calvinyueWillTry/Project_1_Group"> Our Github page</a></li> </p>
-        <p> <li> <a href="#begin"></a> Begin Battle </li> </p>
+        <ul><li> <a href="https://github.com/calvinyueWillTry/Project_1_Group"> Our Github page</a></li>
+        <li> <a href='#begin'></a> Begin Battle </li></ul>
         <!-- how to get the nav button to direct to there, although it can via inspect? -->
     </nav>
     <div>
@@ -66,12 +67,15 @@
             <h5 id="poke6-name"></h5>
         </label>   
     </div>
+    <footer id="begin">
+        <div >
+            <a href="./battleScene/battle.html">
+                <button class="start">
+                    Begin Battle!
+                </button>
+            </a>
+        </div>
+    </footer> 
 </body>
-<footer>
-    <a href="./battle.html">
-        <button id="begin" class="start">
-            Begin Battle!
-        </button>
-    </a>
-</footer>
+
 </html>
