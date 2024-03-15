@@ -1,77 +1,85 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokémon</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <audio controls autoplay loop>
-        <source type="audio/mpeg" src="./Pokemon Stream.Battle Music.mp3">
-    </audio>
-<!--<iframe src="./Pokemon Stream.Battle Music.mp3" allow="autoplay" style="display:flexbox" type="audio/mp3" id="iframeAudio">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pokémon</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<audio controls autoplay loop>
+			<source type="audio/mpeg" src="./Pokemon Stream.Battle Music.mp3" />
+		</audio>
+		<!--<iframe src="./Pokemon Stream.Battle Music.mp3" allow="autoplay" style="display:flexbox" type="audio/mp3" id="iframeAudio">
     </iframe>-->
-    <header id="header" class="headerTitle">
-        <h1 id="title" class="titleText"> Pokémon - get ready to Battle! </h1>
-        <p id="instruct" class="description">
-        Choose a generation to do battle with.
-        </p>
-    </header>
-    <nav>
-    <!--<p> <li><a href="#Bio-about-me"> About Me </a></li>-->
-        <p> <li> <a href="https://github.com/calvinyueWillTry/Project_1_Group"> Our Github page</a></li> </p>
-        <p> <li> <a href="#begin"></a> Begin Battle </li> </p>
-        <!-- how to get the nav button to direct to there, although it can via inspect? -->
-    </nav>
-    <div>
-        <label>
-            <input type="radio" id="pokemon1" name="pocketMonster1" >
-            <img id="poke1-img">
-            <h5 id="poke1-name"></h5>
-        </label>   
-    </div>
-    <div>
-        <label>
-            <input type="radio" id="pokemon2" name="pocketMonster2" >
-            <img id="poke2-img">
-            <h5 id="poke2-name"></h5>
-        </label>   
-    </div>
-    <div>
-        <label>
-            <input type="radio" id="pokemon3" name="pocketMonster3" >
-            <img id="poke3-img">
-            <h5 id="poke3-name"></h5>
-        </label>   
-    </div>
-    <div>
-        <label>
-            <input type="radio" id="pokemon4" name="pocketMonster4" >
-            <img id="poke4-img">
-            <h5 id="poke4-name"></h5>
-        </label>   
-    </div>
-    <div>
-        <label>
-            <input type="radio" id="pokemon5" name="pocketMonster5" >
-            <img id="poke5-img">
-            <h5 id="poke5-name"></h5>
-        </label>   
-    </div>
-    <div>
-        <label>
-            <input type="radio" id="pokemon6" name="pocketMonster6" >
-            <img id="poke6-img">
-            <h5 id="poke6-name"></h5>
-        </label>   
-    </div>
-</body>
-<footer>
-    <a href="./battle.html">
-        <button id="begin" class="start">
-            Begin Battle!
-        </button>
-    </a>
-</footer>
+		<header id="header" class="headerTitle">
+			<h1 id="title" class="titleText">Pokémon - get ready to Battle!</h1>
+			<p id="instruct" class="description">
+				Choose a generation to do battle with.
+			</p>
+		</header>
+		<nav>
+			<!--<p> <li><a href="#Bio-about-me"> About Me </a></li>-->
+			<p>
+				<li>
+					<a href="https://github.com/calvinyueWillTry/Project_1_Group">
+						Our Github page</a
+					>
+				</li>
+			</p>
+			<p>
+				<li><a href="#begin"></a> Begin Battle</li>
+			</p>
+			<!-- how to get the nav button to direct to there, although it can via inspect? -->
+		</nav>
+		<div>
+			<label>
+				<input type="radio" id="pokemon1" name="pocketMonster1" />
+				<img id="poke1-img" />
+				<h5 id="poke1-name"></h5>
+			</label>
+		</div>
+		<div>
+			<label>
+				<input type="radio" id="pokemon2" name="pocketMonster2" />
+				<img id="poke2-img" />
+				<h5 id="poke2-name"></h5>
+			</label>
+		</div>
+		<div>
+			<label>
+				<input type="radio" id="pokemon3" name="pocketMonster3" />
+				<img id="poke3-img" />
+				<h5 id="poke3-name"></h5>
+			</label>
+		</div>
+		<div>
+			<label>
+				<input type="radio" id="pokemon4" name="pocketMonster4" />
+				<img id="poke4-img" />
+				<h5 id="poke4-name"></h5>
+			</label>
+		</div>
+		<div>
+			<label>
+				<input type="radio" id="pokemon5" name="pocketMonster5" />
+				<img id="poke5-img" />
+				<h5 id="poke5-name"></h5>
+			</label>
+		</div>
+		<div>
+			<label>
+				<input type="radio" id="pokemon6" name="pocketMonster6" />
+				<img id="poke6-img" />
+				<h5 id="poke6-name"></h5>
+			</label>
+		</div>
+	</body>
+	<footer>
+		<a href="./battle.html">
+			<button id="begin" class="start">Begin Battle!</button>
+		</a>
+	</footer>
 </html>
