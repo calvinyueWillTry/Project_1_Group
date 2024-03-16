@@ -1,27 +1,31 @@
 audio {
     display: none;
 }
-
 body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-variation-settings:
-        "slnt" 0;
+        "slant" 0;
+}
+.navbar-container {
+    background-color: rgba(204, 204, 204, 0.5); /* Transparent grey background */
+    padding: 10px;
 }
 
-header {
-    display: flex;
+.navbar-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
-    .titleText {
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
+.navbar-container li {
+    display: inline;
+    margin-right: 10px;
+}
 
-    .description {
-        justify-content: center;
-        text-align: center;
-    }
+.navbar-container a {
+    text-decoration: none;
+    color: #333;
 }

@@ -11,36 +11,32 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
 			rel="stylesheet" />
-		<link rel="stylesheet" href="./styles/reset.css" />
-		<link rel="stylesheet/less" type="text/css" href="styles/styles.less" />
-		<script src="https://cdn.jsdelivr.net/npm/less@3.13"></script>
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	</head>
+
 	<body>
 		<audio autoplay loop>
 			<!-- <source type="audio/mpeg" src="./sfx/lanceBattle.mp3" /> -->
 		</audio>
 		<!--<iframe src="./Pokemon Stream.Battle Music.mp3" allow="autoplay" style="display:flexbox" type="audio/mp3" id="iframeAudio">
     </iframe>-->
+			<!--removed <p> tags and updated html to render correctly in flexbox navbar JOSEPH COLLINS-->
+			<!--@CalvinYue one block-level tag which we do not want to nest within an <a> tag is the <li> tag. <li> 
+				tags should always be direct children to either <ol> , <ul>-->
+
+		<nav class="navbar-container">
+			<ul>
+			<!--<p> <li><a href="#Bio-about-me"> About Me </a></li>-->
+			<li><a href="https://github.com/calvinyueWillTry/Project_1_Group">Our GitHub Page</a></li>
+			<li><a href="#begin"></a>Battle Now!</li>
+			</ul>
+		</nav>			
+
 		<header id="header" class="headerTitle">
 			<h1 id="title" class="titleText">Pokémon - get ready to Battle!</h1>
-			<p id="instruct" class="description">
-				Choose a generation to do battle with.
-			</p>
+			<h2 id="instruct" class="description">Choose a generation to do battle with.</h2>
 		</header>
-		<nav>
-			<!--<p> <li><a href="#Bio-about-me"> About Me </a></li>-->
-			<p>
-				<li>
-					<a href="https://github.com/calvinyueWillTry/Project_1_Group">
-						Our Github page</a
-					>
-				</li>
-			</p>
-			<p>
-				<li><a href="#begin"></a> Begin Battle</li>
-			</p>
-			<!-- how to get the nav button to direct to there, although it can via inspect? -->
-		</nav>
 		<div>
 			<label>
 				<input type="radio" id="pokemon1" name="pocketMonster1" />
