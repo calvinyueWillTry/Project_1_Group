@@ -80,15 +80,24 @@
 		<div>
 			<label>
 				<input type="radio" id="pokemon6" name="pocketMonster6" />
-				<img id="poke6-img" />
+				<img id="poke-img" />
 				<h5 id="poke6-name"></h5>
 			</label>
 		</div>
+		<div id="pokemon-list"></div>
+		<div id="move-selection"></div>
+
+		<!-- Game rendering elements -->
+		<div id="game-container">
+			<div id="player-pokemon"></div>
+			<div id="foe-pokemon"></div>
+			<!-- Player, Pokémon, and game map elements -->
+		</div>
+		<script src="./js/index.js" type="module"></script>
 	</body>
 	<footer>
-		<a href="./battle.html">
+		<a href="./battleScene/battle.html">
 			<button id="begin" class="start">Begin Battle!</button>
 		</a>
 	</footer>
-	<script src="./js/index.js"></script>
 </html>
