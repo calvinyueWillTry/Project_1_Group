@@ -2,41 +2,57 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Pokémon</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-			rel="stylesheet" />
-		<!-- Compiled and minified CSS -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	</head>
 
-	<body>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pokémon App</title>
+	<link href="https://fonts.googleapis.com/css?family=Bungee:regular" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<nav class="nav-extended">
+	<div class="nav-wrapper">
+		<a href="https://github.com/calvinyueWillTry/Project_1_Group" class="brand-logo">Our GitHub</a>
+		<ul class="right hide-on-med-and-down">
+			<li><a href="#">Sources</a></li>
+			<li><a href="#">About Us</a></li>
+		</ul>
+	</div>
+	<div class="nav-content">
+		<div class="nav-title-container">
+		<a href="#begin" class="nav-title">PLAY</a></div>
+		<button class="btn-floating btn-large halfway-fab waves-effect waves-light waves-red"></button>
+	</div>
+</nav>
+
+<header>
+	<div class="titleText">
+		<span><a class="pokemon-text">Pokémon</a></span>
+	</div>
+	<!--<h6 id="instruct" class="description"> 
+		Choose a generation to do battle with. </h6> -->
+</header>
+
+<body>
+	<main>
 		<audio autoplay loop>
 			<!-- <source type="audio/mpeg" src="./sfx/lanceBattle.mp3" /> -->
 		</audio>
 		<!--<iframe src="./Pokemon Stream.Battle Music.mp3" allow="autoplay" style="display:flexbox" type="audio/mp3" id="iframeAudio">
     </iframe>-->
-			<!--removed <p> tags and updated html to render correctly in flexbox navbar JOSEPH COLLINS-->
-			<!--@CalvinYue one block-level tag which we do not want to nest within an <a> tag is the <li> tag. <li> 
+		<!--removed <p> tags and updated html to render correctly in flexbox navbar JOSEPH COLLINS-->
+		<!--@CalvinYue one block-level tag which we do not want to nest within an <a> tag is the <li> tag. <li> 
 				tags should always be direct children to either <ol> , <ul>-->
 
-		<nav class="navbar-container">
-			<ul>
-			<!--<p> <li><a href="#Bio-about-me"> About Me </a></li>-->
-			<li><a href="https://github.com/calvinyueWillTry/Project_1_Group">Our GitHub Page</a></li>
-			<li><a href="#begin"></a>Battle Now!</li>
-			</ul>
-		</nav>			
 
-		<header id="header" class="headerTitle">
-			<h1 id="title" class="titleText">Pokémon - get ready to Battle!</h1>
-			<h2 id="instruct" class="description">Choose a generation to do battle with.</h2>
-		</header>
 		<div>
 			<label>
 				<input type="radio" id="pokemon1" name="pocketMonster1" />
@@ -79,10 +95,28 @@
 				<h5 id="poke6-name"></h5>
 			</label>
 		</div>
-	</body>
-	<footer>
-		<a href="./battle.html">
-			<button id="begin" class="start">Begin Battle!</button>
-		</a>
+		<!--JavaScript at end of body for optimized loading-->
+	</main>
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Footer Content</h5>
+					<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
+						content.</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Collaborators</h5>
+					<ul>
+						<li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+						<li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+						<li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</footer>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,133 @@
+.audio {
+    display: none;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    background-image: url("img/ash.jpeg");
+    background-repeat: no-repeat cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+main {
+    flex: 1 0 auto;
+    height: calc(100vh - 64px); /* subtract the height of the navbar */
+    overflow: auto;
+}
+/*
+--------NAVBAR--------
+nav bar attributes referenced from W3Schools
+*/
+.nav-extended {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-image: url(img/navbar.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.nav-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.nav-title {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.btn-floating {
+    background-image: url(img/ball.png);
+    background-size: contain;
+    background-position: center center;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+a.brand-logo {
+    display: flex;
+    font-size: 2rem inherit; /* maybe remove inherit */
+    text-decoration: none;
+    flex-direction: left;
+    font-family: "Bungee";
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+}
+
+.right {
+    list-style-type: none;
+    display: flex;
+    align-items: right;
+}
+
+.right li {
+    margin: 0 10px;
+}
+
+.right a {
+    color: #333;
+    text-decoration: none;
+}
+header {
+    height: 100px; /* specify a fixed height */
+    width: 100%; /* specify a fixed width */
+    display: flex;
+    align-items: center; /* center the content vertically */
+    justify-content: center; /* center the content horizontally */
+}
+
+.titleText {
+    display: inline-block; /* make the <div> an inline-block element */
+}
+.pokemon-text {
+    display: block auto;
+    text-align: center;
+    animation: blinker 2s step-start infinite;
+    align-items: center;
+    color: #F6E652;
+    font-family: 'Pokemon Solid', sans-serif;
+    padding: .2rem;
+    font-size: 4rem;
+    width: 80%;
+}
+footer {
+    height: 64px; /* match the height of the navbar */
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes blinker {
+    3% {
+        opacity: 0;
+    }
+}
