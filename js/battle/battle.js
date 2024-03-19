@@ -1,25 +1,18 @@
 /** @format */
-import { attackEnd, growl, attack } from './attacks';
-import { playPokemon } from './playPokemon';
-import { typingAnim } from './typingAnim';
+import { attackEnd, growl, attack } from './attacks.js';
+import { playPokemon } from './playPokemon.js';
+import { typingAnim } from './typingAnim.js';
+import { reset, healthbar, hider } from './utils.js';
+import {
+	player,
+	playerLevel,
+	playerPokemon,
+	foe,
+	foePokemon,
+	hpPlayerTotal,
+} from './attacks.js';
 
 $(document).ready(() => {
-	// Retrieve the selected Pokémon from local storage
-	const selectedPokemon = JSON.parse(localStorage.getItem('selectedPokemon'));
-
-	// Player setup
-	const player = 'Red';
-	const playerLevel = 5;
-	const playerPokemon = selectedPokemon || {
-		name: 'Pikachu',
-		hp: 35,
-		atk: 70,
-		def: 30,
-	};
-
-	const hpPlayerTotal = playerPokemon.hp;
-
-	let hpPlayer = hpPlayerTotal;
 	$('.player .level').text(playerLevel);
 	$('.player .hp').text(hpPlayerTotal);
 	$('.player .hpTotal').text(hpPlayerTotal);
@@ -28,48 +21,17 @@ $(document).ready(() => {
 	$('#move1').html('TAIL WHIP');
 	$('#move2').html('-');
 
-	// Foe setup
-	const foe = 'Blue';
-	const foePokemon = {
-		name: 'Eevee',
-		hp: 40,
-		atk: 55,
-		def: 50,
-	};
-	const hpFoeFull = foePokemon.hp;
-	let hpFoe = hpFoeFull;
-	let foeBaseDefense = foePokemon.def;
 	$('.foe .level').text(playerLevel);
 	$('.foe .name').text(foePokemon.name.toUpperCase());
 
-	// Hide all menus except dialog
-	const hider = () => {
-		$('.window.menu').hide();
-		$('.window.item').hide();
-		$('.window.pkmn').hide();
-		$('.window.fight').hide();
-	};
+	hider();
 
-	// Reset to battle ready mode for turn or cancel
-	const reset = () => {
-		$('.text1').text('');
-		$('.text2').text('');
-		$('.window.item').hide();
-		$('.window.pkmn').hide();
-		$('.window.fight').hide();
-		$('.window.menu').show();
-	};
+	reset();
 
-	// Health bar width calculation and health numbers
-	const healthbar = (current, total) => {
-		const hpCurrent = current;
-		const hpTotal = total;
-		const percentTotal = 100;
-		const percentCurrent = (hpCurrent * percentTotal) / hpTotal;
-		return percentCurrent;
-	};
+	healthbar();
 
-	// Use potion
+	// TODO: Promise Constructor
+	// Use potion, initialize potion count
 	let potionCount = 1;
 
 	$('.potionCount').text(potionCount);
@@ -88,14 +50,14 @@ $(document).ready(() => {
 		if (hpPlayer >= hpPlayerTotal) {
 			$('.text1').text('HP already');
 			$('.text2').text('full!');
-			typer();
+			typingAnim();
 			window.setTimeout(() => {
 				reset();
 			}, 1000);
 		} else {
 			$('.text1').text('Used POTION!');
 			$('.text2').text('');
-			typer();
+			typingAnim();
 			hpPlayer += strength;
 			if (hpPlayer >= hpPlayerTotal) {
 				hpPlayer = hpPlayerTotal;
