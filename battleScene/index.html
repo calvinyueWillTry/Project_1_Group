@@ -16,7 +16,10 @@
 			rel="stylesheet" />
 		<link href="./battle.css" rel="stylesheet" />
 	</head>
-	<body>
+	<body> 
+		<audio autoplay loop> <!-- Added music back in. Is this low enough? We can't have the volume too low -->
+			<source type="audio/mpeg" src="../sfx/battle_lower.mp3" />
+	   </audio>
 		<div id="pokemon">
 			<div class="depth">
 				<div class="layer foe">
@@ -122,7 +125,13 @@
 				</div>
 			</div>
 		</div>
+		<div><!--Added link to be able to go into battle in my file-->
+			<a href="../index.html">
+				<button class="btn-floating btn-large halfway-fab waves-effect waves-light red">Return</button>
+			</a>	
+		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<script src="../js/battle.js"></script>
+		<script src="../js/battle/battle.js"></script>
+		
 	</body>
 </html>

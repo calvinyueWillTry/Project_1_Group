@@ -17,8 +17,8 @@
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-	<link rel="stylesheet" href="styles/styles.css" />
-	<link rel="stylesheet" href="styles/reset.css" />
+	<link rel="stylesheet" href="../Project_1_Group/styles/styles.css" />
+	<link rel="stylesheet" href="../Project_1_Group/styles/reset.css" />
 </head>
 
 <nav class="nav-extended">
@@ -30,10 +30,13 @@
 		</ul>
 	</div>
 	<div class="nav-content">
-		<div class="nav-title-container">
-			<a href="#begin" class="nav-title">BATTLE NOW!</a>
-		</div>
+		<div class="nav-title-container"> <!--fixed the link for both to be able to go into battle in my file-->
+			<a href="../Project_1_Group/battleScene/index.html" class="nav-title">BATTLE NOW!</a>
+	</div>
+		<!-- red pokeball button which also goes to battle -->
+		<a href="../Project_1_Group/battleScene/index.html">
 		<button class="btn-floating btn-large halfway-fab waves-effect waves-light red"></button>
+		</a>	
 	</div>
 </nav>
 
@@ -47,8 +50,9 @@
 
 <body>
 	<main>
+		<!-- Added music back in. Is this low enough? We can't have the volume too low -->
 		<audio autoplay loop>
-			<!-- <source type="audio/mpeg" src="./sfx/lanceBattle.mp3" /> -->
+			 <source type="audio/mpeg" src="./sfx/lanceBattle_lower.mp3" />
 		</audio>
 		<!--<iframe src="./Pokemon Stream.Battle Music.mp3" allow="autoplay" style="display:flexbox" type="audio/mp3" id="iframeAudio">
     </iframe>-->
@@ -102,10 +106,21 @@
 	<footer class="page-footer center">
 		<div class="container">
 			<div class="row">
-				<div class="col l6 s12">
-					<h5 class="white-text">insert text</h5>
-					<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-						content.</p>
+				<div class="col l6 s12"> 
+				<!-- Added resources and credits, starting with a couple links (probably have to credit musicians
+					too if we want to keep going with this)-->
+					<h5 class="white-text">Resources and Credits</h5>
+					<p class="grey-text text-lighten-4"></p>
+					<a href="https://pokeapi.co/docs/v2">
+						<button id="button" class="buttonLink">
+							PokéAPI
+						 </button>
+					 </a>
+					 <a href="https://www.pokencyclopedia.info/en/index.php">
+						<button id="button" class="buttonLink">
+							Pokencyclopedia
+						 </button>
+					 </a>
 				</div>
 				<div class="col l4 offset-l2 s12">
 					<h5 class="white-text">Collaborators</h5>
