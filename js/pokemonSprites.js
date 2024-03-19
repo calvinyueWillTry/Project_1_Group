@@ -1,9 +1,13 @@
 /** @format */
 
+let index = 1;
+// Api for in-game sprites
+const battleSpriteUrl = `https://www.pokencyclopedia.info/sprites/gen1/spr_red-blue_gb/spr_rb-gb_${index}.png`;
+
 // This function fetches the sprite for a Pokémon
 export function fetchPokemonSprite(pokemonId) {
-	const spriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`;
-	return fetch(spriteUrl)
+	const selectionSpriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`;
+	return fetch(selectionSpriteUrl)
 		.then((response) => response.blob())
 		.then((blob) => URL.createObjectURL(blob))
 		.catch((error) => {
@@ -18,24 +22,24 @@ export function displayPokemonList(pokemonList) {
 
 	pokemonList.forEach((pokemon, index) => {
 		const pokemonId = pokemon.url.split('/')[6];
-		const pokemonElement = document.createElement('div');
+		const pokemonEl = document.createElement('div');
 		const pokemonImage = document.createElement('img');
 		const pokemonName = document.createElement('span');
 
 		pokemonName.textContent = pokemon.name;
 
-		fetchPokemonSprite(pokemonId).then((spriteUrl) => {
-			if (spriteUrl) {
-				pokemonImage.src = spriteUrl;
-				pokemonElement.appendChild(pokemonImage);
+		fetchPokemonSprite(pokemonId).then((selectionSpriteUrl) => {
+			if (selectionSpriteUrl) {
+				pokemonImage.src = selectionSpriteUrl;
+				pokemonEl.appendChild(pokemonImage);
 			}
 		});
 
-		pokemonElement.appendChild(pokemonName);
-		pokemonElement.addEventListener('click', () => {
+		pokemonEl.appendChild(pokemonName);
+		pokemonEl.addEventListener('click', () => {
 			selectPokemon(pokemon);
 		});
-		pokemonListElement.appendChild(pokemonElement);
+		pokemonListElement.appendChild(pokemonEl);
 	});
 }
 
@@ -56,5 +60,5 @@ export function selectPokemon(pokemon) {
 	localStorage.setItem('selectedPokemon', JSON.stringify(pokemon));
 	console.log('Selected Pokémon:', pokemon);
 
-	window.location.href = '/battleScene/battle.html';
+	window.location.href = '/battleScene/index.html';
 }

@@ -1,5 +1,5 @@
 // Api imgs, pull pokemon sprite from pokeApi. change html content to those sprites
-export default function sprites = ()
+export function sprites = ()
  => fetch('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png')
     .then((response) => response.json())
     .then((data) => {
@@ -15,7 +15,7 @@ export default function sprites = ()
      document.getElementById('poke-img').src = sprites;
 
 // Make API request to fetch the list of Pokémon
-export default function fetchPokemonList() {
+export function fetchPokemonList() {
 	fetch('https://pokeapi.co/api/v2/pokemon/generation/ids/' + generation + '/')
 		.then((response) => response.json())
 		.then((data) => {
@@ -28,7 +28,7 @@ export default function fetchPokemonList() {
 }
 
 // Display the list of Pokémon to the user
-export default function displayPokemonList(pokemonList) {
+export function displayPokemonList(pokemonList) {
 	const pokemonListElement = document.getElementById('pokemon-list');
 
 	pokemonList.forEach((pokemon) => {

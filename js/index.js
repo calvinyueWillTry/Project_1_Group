@@ -9,24 +9,14 @@ import {
 // Event listeners and initialization
 document.addEventListener('DOMContentLoaded', () => {
 	// Initialize the game
-	initializeGame();
+	initializeList();
 });
 
-function initializeGame() {
+function initializeList() {
 	// Fetch Pokémon data and update the UI
-	fetchPokemonList()
-		.then(() => {
-			updatePokemonDetails('pikachu', 'player-pokemon');
-			updatePokemonDetails('eevee', 'foe-pokemon');
-		})
-		.catch((error) => {
-			console.log('Error initializing Pokémon data:', error);
-		});
-	// Start fetching and displaying the Pokémon list
-	fetchPokemonList();
-
-	// Start the game loop
-	gameLoop();
+	fetchPokemonList().catch((error) => {
+		console.log('Error initializing Pokémon data:', error);
+	});
 }
 
 const selectedPokemon = JSON.parse(localStorage.getItem('selectedPokemon'));
