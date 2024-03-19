@@ -56,9 +56,11 @@ export async function fetchPokemonList() {
 }
 
 // Stores the users selected Pokémon in local storage
-export function selectPokemon(pokemon) {
-	localStorage.setItem('selectedPokemon', JSON.stringify(pokemon));
-	console.log('Selected Pokémon:', pokemon);
+
+export function selectPokemon(pokemonIndex) {
+	console.log('this is not working', pokemonIndex);
+	localStorage.setItem('selectedPokemonIndex', JSON.stringify(pokemonIndex));
+	console.log('Selected Pokémon Index:', pokemonIndex);
 
 	window.location.href = '/battleScene/index.html';
 }
