@@ -1,11 +1,42 @@
 /** @format */
 
+import { hider, healthbar, reset } from './utils.js';
+import { typingAnim } from './typingAnim.js';
+
+// Retrieve the selected Pokémon from local storage
+// const selectedPokemon = JSON.parse(localStorage.getItem('selectedPokemon'));
+// Player setup
+export const player = 'Red';
+export const playerLevel = 5;
+export const playerPokemon = {
+	name: 'Pikachu',
+	hp: 35,
+	atk: 70,
+	def: 30,
+};
+
+// Foe setup
+export const foe = 'Blue';
+export const foePokemon = {
+	name: 'Eevee',
+	hp: 40,
+	atk: 55,
+	def: 50,
+};
+
+// Foe pokemon setup
+export const hpPlayerTotal = playerPokemon.hp;
+export const hpFoeFull = foePokemon.hp;
+let hpFoe = hpFoeFull;
+let foeBaseDefense = foePokemon.def;
+let hpPlayer = hpPlayerTotal;
+
 // Enemy turn
-export const attackEnd = () => {
+export const attackEnd = async () => {
 	if (hpFoe <= 0) {
 		$('.window.menu').hide();
 		$('.foe .hp-bar-active').css('width', '0%');
-		window.setTimeout(() => {
+		await window.setTimeout(async () => {
 			$('.foe .images').delay(500).animate(
 				{
 					bottom: '-35em',
@@ -14,20 +45,20 @@ export const attackEnd = () => {
 			);
 			$('.text1').text(`${foePokemon.name.toUpperCase()} fainted!`);
 			$('.text2').text('');
-			typer();
-			window.setTimeout(() => {
+			typingAnim();
+			await window.setTimeout(async () => {
 				$('.foe .stats').hide();
 				$('.text1').text(`Got $${Math.floor(playerLevel * 2.5)} for`);
 				$('.text2').text('winning!');
-				typer();
+				typingAnim();
 				window.setTimeout(() => {
 					$('.text1').text(`${foe.toUpperCase()}: I can't`);
 					$('.text2').text('believe it!');
-					typer();
+					typingAnim();
 					window.setTimeout(() => {
 						$('.text1').text('I chose the');
 						$('.text2').text('wrong POKéMON!');
-						typer();
+						typingAnim();
 					}, 2000);
 				}, 2000);
 			}, 2000);
@@ -36,7 +67,7 @@ export const attackEnd = () => {
 		window.setTimeout(() => {
 			$('.text1').text(`${foePokemon.name.toUpperCase()} used`);
 			$('.text2').text('TACKLE!');
-			typer();
+			typingAnim();
 			$('.foe .images')
 				.animate(
 					{
@@ -82,7 +113,10 @@ export const attackEnd = () => {
 														(foePokemon.atk / playerPokemon.def)
 												) / 50
 											) + 2;
+										// TODO: Remove SetTimeouts
+										// console.log(hpPlayer);
 										hpPlayer -= baseDamage;
+										// console.log(hpPlayer);
 										if (hpPlayer <= 0) {
 											$('.window.menu').hide();
 											$('.player .hp').text('0');
@@ -99,17 +133,17 @@ export const attackEnd = () => {
 													`${playerPokemon.name.toUpperCase()} fainted...`
 												);
 												$('.text2').text('');
-												typer();
+												typingAnim();
 												window.setTimeout(() => {
 													$('.text1').text(`${player.toUpperCase()} is out of`);
 													$('.text2').text('useable POKéMON...');
-													typer();
+													typingAnim();
 													window.setTimeout(() => {
 														$('.text1').text(
 															`${player.toUpperCase()} whited out!`
 														);
 														$('.text2').text('');
-														typer();
+														typingAnim();
 													}, 2000);
 												}, 2000);
 											}, 2000);
@@ -141,12 +175,12 @@ export const growl = () => {
 	hider();
 	$('.text1').text(playerPokemon.name.toUpperCase());
 	$('.text2').text('used GROWL!');
-	typer();
+	typingAnim();
 	window.setTimeout(() => {
 		if (foeBaseDefense < foePokemon.def - 20) {
 			$('.text1').text(`${foePokemon.name.toUpperCase()}'s defense`);
 			$('.text2').text("can't drop lower!");
-			typer();
+			typingAnim();
 			window.setTimeout(() => {
 				attackEnd();
 			}, 2000);
@@ -154,7 +188,7 @@ export const growl = () => {
 			$('.text1').text(`${foePokemon.name.toUpperCase()}'s defense`);
 			$('.text2').text('dropped by 2!');
 			foeBaseDefense -= 2;
-			typer();
+			typingAnim();
 			window.setTimeout(() => {
 				attackEnd();
 			}, 2000);
@@ -166,7 +200,7 @@ export const attack = (moveName) => {
 	hider();
 	$('.text1').text(`${playerPokemon.name.toUpperCase()} used`);
 	$('.text2').text(`${moveName.toUpperCase()}!`);
-	typer();
+	typingAnim();
 	$('.player .images')
 		.animate(
 			{

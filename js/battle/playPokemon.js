@@ -1,14 +1,14 @@
 /** @format */
 import { typingAnim } from './typingAnim.js';
-// Foe setup
+import {
+	player,
+	playerLevel,
+	playerPokemon,
+	foe,
+	foePokemon,
+} from './attacks.js';
+import { reset } from './utils.js';
 
-var foe = 'Blue';
-var foePokemon = {
-	name: 'Eevee',
-	hp: 40,
-	atk: 55,
-	def: 50,
-};
 // Start animation
 export const playPokemon = () => {
 	$('.foe .images').css('right', '16em');
