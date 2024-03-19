@@ -1,4 +1,4 @@
-// Api imgs
+// Api imgs, pull pokemon sprite from pokeApi. change html content to those sprites
 export function sprites = ()
  => fetch('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png')
     .then((response) => response.json())

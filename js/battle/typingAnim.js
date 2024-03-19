@@ -1,4 +1,6 @@
 /** @format */
+import { attack } from './attacks.js';
+import { hider, reset } from './utils.js';
 
 // Animated typing of text
 export const typingAnim = () => {
@@ -66,11 +68,11 @@ $('.button.run').click(() => {
 	hider();
 	$('.text1').text("No! There's no");
 	$('.text2').text('running from a');
-	typer();
+	typingAnim();
 	window.setTimeout(() => {
 		$('.text1').text('trainer battle!');
 		$('.text2').text('');
-		typer();
+		typingAnim();
 		window.setTimeout(() => {
 			reset();
 		}, 2000);
