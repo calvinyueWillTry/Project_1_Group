@@ -1,7 +1,7 @@
 /** @format */
 
 // This function fetches the sprite for a Pokémon
-export default function fetchPokemonSprite(pokemonId) {
+export function fetchPokemonSprite(pokemonId) {
 	const spriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`;
 	return fetch(spriteUrl)
 		.then((response) => response.blob())
@@ -13,7 +13,7 @@ export default function fetchPokemonSprite(pokemonId) {
 }
 
 // This creates the list of Pokémon and displays it to the user
-export default function displayPokemonList(pokemonList) {
+export function displayPokemonList(pokemonList) {
 	const pokemonListElement = document.getElementById('pokemon-list');
 
 	pokemonList.forEach((pokemon, index) => {
@@ -40,7 +40,7 @@ export default function displayPokemonList(pokemonList) {
 }
 
 // This function fetches the list of Pokémon from the API
-export default function fetchPokemonList() {
+export async function fetchPokemonList() {
 	fetch('https://pokeapi.co/api/v2/pokemon')
 		.then((response) => response.json())
 		.then((data) => {
@@ -52,7 +52,7 @@ export default function fetchPokemonList() {
 }
 
 // Stores the users selected Pokémon in local storage
-export default function selectPokemon(pokemon) {
+export function selectPokemon(pokemon) {
 	localStorage.setItem('selectedPokemon', JSON.stringify(pokemon));
 	console.log('Selected Pokémon:', pokemon);
 
