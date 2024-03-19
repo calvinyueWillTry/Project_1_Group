@@ -11,9 +11,9 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
 			rel="stylesheet" />
+		<link rel="stylesheet/less" type="text/css" href="./styles/style.less" />
+		<script src="https://cdn.jsdelivr.net/npm/less"></script>
 		<link rel="stylesheet" href="./styles/reset.css" />
-		<link rel="stylesheet/less" type="text/css" href="styles/styles.less" />
-		<script src="https://cdn.jsdelivr.net/npm/less@3.13"></script>
 	</head>
 	<body>
 		<audio autoplay loop>
@@ -79,13 +79,23 @@
 		<div>
 			<label>
 				<input type="radio" id="pokemon6" name="pocketMonster6" />
-				<img id="poke6-img" />
+				<img id="poke-img" />
 				<h5 id="poke6-name"></h5>
 			</label>
 		</div>
+		<div id="pokemon-list"></div>
+		<div id="move-selection"></div>
+
+		<!-- Game rendering elements -->
+		<div id="game-container">
+			<div id="player-pokemon"></div>
+			<div id="foe-pokemon"></div>
+			<!-- Player, Pokémon, and game map elements -->
+		</div>
+		<script src="./js/index.js" type="module"></script>
 	</body>
 	<footer>
-		<a href="./battle.html">
+		<a href="./battleScene/battle.html">
 			<button id="begin" class="start">Begin Battle!</button>
 		</a>
 	</footer>
