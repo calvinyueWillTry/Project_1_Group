@@ -6,7 +6,7 @@ let pokemon;
 let gameMap;
 
 // Game initialization
-export function initGame() {
+export default function initGame() {
 	// Initialize player, pokemon, and game map
 	player = new Player();
 	pokemon = new Pokemon();
@@ -17,7 +17,7 @@ export function initGame() {
 }
 
 // Select a Pokémon and fetch its details
-export function selectPokemon(pokemonUrl) {
+export default function selectPokemon(pokemonUrl) {
 	fetch(pokemonUrl)
 		.then((response) => response.json())
 		.then((pokemonData) => {
@@ -37,7 +37,7 @@ export function selectPokemon(pokemonUrl) {
 }
 
 // Display move selection for the selected Pokémon
-export function displayMoveSelection(pokemon) {
+export default function displayMoveSelection(pokemon) {
 	const moveSelectionElement = document.getElementById('move-selection');
 
 	pokemon.moves.forEach((move) => {
@@ -52,7 +52,7 @@ export function displayMoveSelection(pokemon) {
 }
 
 // Handle move selection for battle
-export function selectMoveForBattle(pokemon, move) {
+export default function selectMoveForBattle(pokemon, move) {
 	// Set the selected move for the Pokémon
 	pokemon.selectedMove = move;
 }

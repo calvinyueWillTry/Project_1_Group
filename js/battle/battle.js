@@ -1,7 +1,7 @@
 /** @format */
-import { attackEnd, growl, attack } from './attacks';
-import { playPokemon } from './playPokemon';
-import { typingAnim } from './typingAnim';
+import { attackEnd, growl, attack } from './attacks.js';
+import { playPokemon } from './playPokemon.js';
+import { typingAnim } from './typingAnim.js';
 
 $(document).ready(() => {
 	// Retrieve the selected Pokémon from local storage
@@ -29,8 +29,8 @@ $(document).ready(() => {
 	$('#move2').html('-');
 
 	// Foe setup
-	const foe = 'Blue';
-	const foePokemon = {
+	var foe = 'Blue';
+	var foePokemon = {
 		name: 'Eevee',
 		hp: 40,
 		atk: 55,
@@ -88,14 +88,14 @@ $(document).ready(() => {
 		if (hpPlayer >= hpPlayerTotal) {
 			$('.text1').text('HP already');
 			$('.text2').text('full!');
-			typer();
+			typingAnim();
 			window.setTimeout(() => {
 				reset();
 			}, 1000);
 		} else {
 			$('.text1').text('Used POTION!');
 			$('.text2').text('');
-			typer();
+			typingAnim();
 			hpPlayer += strength;
 			if (hpPlayer >= hpPlayerTotal) {
 				hpPlayer = hpPlayerTotal;

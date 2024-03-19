@@ -1,5 +1,14 @@
 /** @format */
+import { typingAnim } from './typingAnim.js';
+// Foe setup
 
+var foe = 'Blue';
+var foePokemon = {
+	name: 'Eevee',
+	hp: 40,
+	atk: 55,
+	def: 50,
+};
 // Start animation
 export const playPokemon = () => {
 	$('.foe .images').css('right', '16em');
@@ -27,7 +36,7 @@ export const playPokemon = () => {
 			window.setTimeout(() => {
 				$('.text1').text(`${foe.toUpperCase()} wants`);
 				$('.text2').text('to fight!');
-				typer();
+				typingAnim();
 				window.setTimeout(() => {
 					$('.balls').hide();
 					$('.foe .images').animate(
@@ -40,7 +49,7 @@ export const playPokemon = () => {
 					window.setTimeout(() => {
 						$('.text1').text(`${foe.toUpperCase()} sent`);
 						$('.text2').text(`out ${foePokemon.name.toUpperCase()}!`);
-						typer();
+						typingAnim();
 						$('.foe .pokemon').show();
 						$('.foe .trainer').hide();
 						$('.foe .images').animate(
@@ -71,7 +80,7 @@ export const playPokemon = () => {
 								);
 								$('.text1').text(`Go! ${playerPokemon.name.toUpperCase()}!`);
 								$('.text2').text('');
-								typer();
+								typingAnim();
 								$('.player .stats').show();
 								window.setTimeout(() => {
 									reset();

@@ -1,4 +1,5 @@
 /** @format */
+// Import required modules and functions
 import { fetchPokemonData, getPokemonDetails } from './gameLogic.js';
 import { calculateDamage, applyDamage } from './gameLogic.js';
 import {

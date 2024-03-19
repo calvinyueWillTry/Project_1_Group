@@ -29,7 +29,7 @@ export async function getPokemonDetails(pokemonName) {
 }
 
 // Battle logic and mechanics
-export function calculateDamage(attackerStats, defenderStats, move) {
+export default function calculateDamage(attackerStats, defenderStats, move) {
 	// Implement damage calculation based on Pokémon stats and move power
 	// You can expand this function to include type advantages, status effects, etc.
 	const damage = Math.floor(
@@ -38,7 +38,7 @@ export function calculateDamage(attackerStats, defenderStats, move) {
 	return damage;
 }
 
-export function applyDamage(pokemonStats, damage) {
+export default function applyDamage(pokemonStats, damage) {
 	pokemonStats.hp -= damage;
 	if (pokemonStats.hp < 0) {
 		pokemonStats.hp = 0;
@@ -46,7 +46,7 @@ export function applyDamage(pokemonStats, damage) {
 }
 
 // UI interaction and update functions
-export function updatePokemonDetails(pokemonName, elementId) {
+export default function updatePokemonDetails(pokemonName, elementId) {
 	getPokemonDetails(pokemonName)
 		.then((data) => {
 			if (data) {
@@ -66,13 +66,13 @@ export function updatePokemonDetails(pokemonName, elementId) {
 		});
 }
 
-export function handleMoveSelection(move) {
+export default function handleMoveSelection(move) {
 	// Implement the logic for handling move selection during battle
 	// You can update the UI, initiate animations, and calculate damage here
 	console.log(`Selected move: ${move}`);
 }
 
-export function handleBattleAction(action) {
+export default function handleBattleAction(action) {
 	// Implement the logic for handling battle actions (e.g., fight, run, use item)
 	// You can update the UI, perform necessary calculations, and update game state
 	console.log(`Battle action: ${action}`);
