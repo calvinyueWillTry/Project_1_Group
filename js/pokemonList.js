@@ -27,7 +27,7 @@ export function fetchPokemonList() {
 		});
 }
 
-// Display the list of Pokémon to the user
+// Display the list of Pokémon to the user on /pokemonSelection/index.html
 export function displayPokemonList(pokemonList) {
 	const pokemonListElement = document.getElementById('pokemon-list');
 

@@ -1,11 +1,10 @@
 /** @format */
-
+// Starting index (the first Pokémon, which is bulbasaur:3)
 let index = 1;
-// Api for in-game sprites
-const battleSpriteUrl = `https://www.pokencyclopedia.info/sprites/gen1/spr_red-blue_gb/spr_rb-gb_${index}.png`;
 
 // This function fetches the sprite for a Pokémon
 export function fetchPokemonSprite(pokemonId) {
+	// pokeApi repo to sprite of og games
 	const selectionSpriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`;
 	return fetch(selectionSpriteUrl)
 		.then((response) => response.blob())
@@ -18,13 +17,19 @@ export function fetchPokemonSprite(pokemonId) {
 
 // This creates the list of Pokémon and displays it to the user
 export function displayPokemonList(pokemonList) {
+	const pokeApiUrl = `https://pokeapi.co/api/v2/pokemon/${index}/`;
 	const pokemonListElement = document.getElementById('pokemon-list');
 
+	// adds elements for each Pokémon up to the end of the list
 	pokemonList.forEach((pokemon, index) => {
 		const pokemonId = pokemon.url.split('/')[6];
 		const pokemonEl = document.createElement('div');
 		const pokemonImage = document.createElement('img');
 		const pokemonName = document.createElement('span');
+		const pokemonHeight = document.createElement('span');
+		const pokemonWeight = document.createElement('span');
+		pokemonHeight.textContent = pokemon.height;
+		pokemonWeight.textContent = pokemon.weight;
 
 		pokemonName.textContent = pokemon.name;
 
