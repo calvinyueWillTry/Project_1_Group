@@ -56,7 +56,6 @@ export async function fetchPokemonList() {
 }
 
 // Stores the users selected Pokémon in local storage
-
 export function selectPokemon(pokemonIndex) {
 	console.log('this is not working', pokemonIndex);
 	localStorage.setItem('selectedPokemonIndex', JSON.stringify(pokemonIndex));
