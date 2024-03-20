@@ -125,7 +125,7 @@ export const attackEnd = async () => {
 											window.setTimeout(() => {
 												$('.player .images').delay(500).animate(
 													{
-														bottom: '-35.714em',
+														bottom: '-35em',
 													},
 													1000
 												);
