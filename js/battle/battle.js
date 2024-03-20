@@ -78,4 +78,21 @@ $(document).ready(() => {
 		}
 	};
 }, 1000);
+
 playPokemon();
+
+// This is going to return the PokeAPi
+const selectedPokemonIndex = localStorage.getItem('selectedPokemonIndex');
+const pokemonUrl = JSON.parse(selectedPokemonIndex);
+console.log(pokemonUrl.url.split('/')[6]);
+let pokeId = pokemonUrl.url.split('/')[6];
+
+// Update the player's Pokémon sprite source
+const playerPokemonSpriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/${pokeId}.gif`;
+
+// If the index returns correctly then update the player's Pokémon sprite source
+https: if (selectedPokemonIndex !== NaN) {
+	$('#playerPokemon').attr('src', playerPokemonSpriteUrl);
+} else {
+	$('#playerPokemon').attr('src', '../../imgs/pikachu_back.svg');
+}
