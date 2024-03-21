@@ -124,6 +124,7 @@ header {
     /* center the content vertically */
     justify-content: center;
     /* center the content horizontally */
+    margin-top: 50px;
 }
 
 .titleText {
