@@ -14,18 +14,6 @@ export function sprites = ()
 
      document.getElementById('poke-img').src = sprites;
 
-// Make API request to fetch the list of Pokémon
-export function fetchPokemonList() {
-	fetch('https://pokeapi.co/api/v2/pokemon/generation/ids/' + generation + '/')
-		.then((response) => response.json())
-		.then((data) => {
-			// Display the list of Pokémon to the user
-			displayPokemonList(data.results);
-		})
-		.catch((error) => {
-			console.log('Error fetching Pokémon list:', error);
-		});
-}
 
 // Display the list of Pokémon to the user on /pokemonSelection/index.html
 export function displayPokemonList(pokemonList) {

@@ -18,8 +18,8 @@ export function fetchPokemonSprite(pokemonId) {
 // This creates the list of Pokémon and displays it to the user
 export function displayPokemonList(pokemonList) {
 	const pokeApiUrl = `https://pokeapi.co/api/v2/pokemon/${index}/`;
-	const pokemonListElement = document.getElementById('pokemon-list');
-	const pokemonDescInfo = `https://pokeapi.co/api/v2/characteristic/${index}/descriptions/description/`;
+	const pokemonListElement = document.getElementById('poke-slot');
+	const pokemonDescInfo = await fetch(`https://pokeapi.co/api/v2/characteristic/${index}/descriptions/description/`);
 
 	console.log(pokemonDescInfo);
 	// adds elements for each Pokémon up to the end of the list
@@ -31,7 +31,6 @@ export function displayPokemonList(pokemonList) {
 		const pokemonDescription = document.createElement('span');
 
 		pokemonDescription.textContent = pokemon.descriptions;
-
 		pokemonName.textContent = pokemon.name;
 
 		fetchPokemonSprite(pokemonId).then((selectionSpriteUrl) => {
