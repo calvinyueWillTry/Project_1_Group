@@ -6,61 +6,65 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<link href="https://fonts.googleapis.com/css?family=Freckle+Face:regular" rel="stylesheet" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-		<link rel="stylesheet" href="pokemon.css"/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Freckle+Face:regular"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+		<link rel="stylesheet" href="pokemon.css" />
 	</head>
 	<body>
 		<header id="titleSelect" class="titleSelection">
 			Please select your Pokémon below (maximum 6)
 		</header>
 		<div id="pokemon-list">
-			<img id="poke-img" alt="" />
+			<img id="pok-img" alt="" />
 		</div>
 		<main>
 			<!--Stores sprite src in local storage  -->
 			<div>
 				<label>
-					<input type="radio" id="pokemon1" name="pocketMonster1" />
-					<img id="poke1-img" alt="" />
-					<h5 id="poke1-name" alt=""></h5>
-					<p id="poke1-slot" class="poke1-select">Pokémon #1</p>
-				</label>
-				<label>
-					<input type="radio" id="pokemon2" name="pocketMonster2" />
-					<img id="poke2-img" alt="" />
-					<h5 id="poke2-name" alt=""></h5>
-					<p id="poke2-slot" class="poke2-select">Pokémon #2</p>
-				</label>
-				<label>
-					<input type="radio" id="pokemon3" name="pocketMonster3" />
-					<img id="poke3-img" alt="" />
-					<h5 id="poke3-name" alt=""></h5>
-					<p id="poke3-slot" class="poke3-select">Pokémon #3</p>
-				</label>
-			</div>
-			<div>
-				<label>
-					<input type="radio" id="pokemon4" name="pocketMonster4" />
-					<img id="poke4-img" alt="" />
-					<h5 id="poke4-name" alt=""></h5>
-					<p id="poke4-slot" class="poke4-select">Pokémon #4</p>
-				</label>
-			</div>
-			<div>
-				<label>
-					<input type="radio" id="pokemon5" name="pocketMonster5" />
-					<img id="poke5-img" alt="" />
-					<h5 id="poke5-name" alt=""></h5>
-					<p id="poke5-slot" class="poke5-select">Pokémon #5</p>
-				</label>
-			</div>
-			<div>
-				<label>
-					<input type="radio" id="pokemon6" name="pocketMonster6" />
+					<input type="radio" id="pokemon1" name="pocketMonster" />
 					<img id="poke-img" alt="" />
-					<h5 id="poke6-name" alt=""></h5>
-					<p id="poke6-slot" class="poke6-select">Pokémon #6</p>
+					<h5 id="poke-name" alt=""></h5>
+					<p id="poke-slot" class="poke1-select">Pokémon #1</p>
+				</label>
+				<label>
+					<input type="radio" id="pokemon2" name="pocketMonster" />
+					<img id="poke-img" alt="" />
+					<h5 id="poke-name" alt=""></h5>
+					<p id="poke-slot" class="poke2-select">Pokémon #2</p>
+				</label>
+				<label>
+					<input type="radio" id="pokemon3" name="pocketMonster" />
+					<img id="poke-img" alt="" />
+					<h5 id="poke-name" alt=""></h5>
+					<p id="poke-slot" class="poke3-select">Pokémon #3</p>
+				</label>
+			</div>
+			<div>
+				<label>
+					<input type="radio" id="pokemon4" name="pocketMonster" />
+					<img id="poke-img" alt="" />
+					<h5 id="poke-name" alt=""></h5>
+					<p id="poke-slot" class="poke4-select">Pokémon #4</p>
+				</label>
+			</div>
+			<div>
+				<label>
+					<input type="radio" id="pokemon5" name="pocketMonster" />
+					<img id="poke-img" alt="" />
+					<h5 id="poke-name" alt=""></h5>
+					<p id="poke-slot" class="poke5-select">Pokémon #5</p>
+				</label>
+			</div>
+			<div>
+				<label>
+					<input type="radio" id="pokemon6" name="pocketMonster" />
+					<img id="poke-img" alt="" />
+					<h5 id="poke-name" alt=""></h5>
+					<p id="poke-slot" class="poke6-select">Pokémon #6</p>
 				</label>
 			</div>
 		</main>
@@ -74,6 +78,10 @@
 				</a>
 			</div>
 		</div>
+		<script>
+			var audio = document.getElementById('pokeAudio');
+			audio.volume = 0.6;
+		</script>
 		<script src="../js/index.js" type="module"></script>
 	</body>
 </html>
