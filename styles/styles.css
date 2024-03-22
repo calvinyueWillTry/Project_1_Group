@@ -62,7 +62,20 @@ nav bar attributes referenced from W3Schools
 	flex: 1;
 	/* Allow the title to grow to take available space */
 }
-
+@keyframes example {
+	0% {
+		color: rgb(37, 150, 190);
+	}
+	25% {
+		color: yellow;
+	}
+	50% {
+		color: red;
+	}
+	100% {
+		color: green;
+	}
+}
 .nav-title {
 	font-family: 'Press Start 2P';
 	text-decoration: none;
@@ -155,9 +168,25 @@ header {
 	padding: 5px 0;
 	color: #fff;
 }
-
 h5.white-text {
 	font-family: 'Pokemon Solid', sans-serif;
+}
+
+.footer-links {
+	font-family: 'Bungee';
+}
+.footer-links ul li a {
+	text-decoration: none;
+	color: white;
+	padding: 2px;
+	margin-right: 10px;
+	transition: all 0.5s ease;
+}
+.footer-links ul li a:hover {
+	background-color: white;
+	color: black;
+	box-shadow: 0 0 2px white;
+	border-radius: 3px;
 }
 
 /*

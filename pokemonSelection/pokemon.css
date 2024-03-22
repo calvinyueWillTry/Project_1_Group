@@ -1,0 +1,75 @@
+/* @format */
+html, body {
+    margin: 0;
+    padding: 0;
+    /* background-image: url(img/selectpage.jpg); */
+    background-size: cover/contain;
+}
+
+#titleSelect {
+    text-align: center;
+    padding: 20px;
+    font-family: "Freckle Face"; 
+    font-size: x-large;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    padding: 20px; 
+}
+
+main > div {
+    flex: 0 0 calc(33.33% - 20px); 
+    margin: 10px; 
+    text-align: center;
+}
+span {
+    font-family: "Freckle Face";
+
+}
+
+/* Making the images responsive */
+img {
+    max-width: 100%; 
+    height: 200px;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+.nav-title-container {
+    flex: 1; 
+    text-align: center;
+}
+
+.returnHomePage {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.returnHomePage:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 768px) {
+    main > div {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+/* For screens smaller than 480px (e.g., small smartphones) */
+@media (max-width: 480px) {
+    main > div {
+        flex-basis: calc(100% - 20px);
+    }
+}

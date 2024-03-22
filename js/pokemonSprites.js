@@ -19,17 +19,18 @@ export function fetchPokemonSprite(pokemonId) {
 export function displayPokemonList(pokemonList) {
 	const pokeApiUrl = `https://pokeapi.co/api/v2/pokemon/${index}/`;
 	const pokemonListElement = document.getElementById('pokemon-list');
+	const pokemonDescInfo = `https://pokeapi.co/api/v2/characteristic/${index}/descriptions/description/`;
 
+	console.log(pokemonDescInfo);
 	// adds elements for each Pokémon up to the end of the list
 	pokemonList.forEach((pokemon, index) => {
 		const pokemonId = pokemon.url.split('/')[6];
 		const pokemonEl = document.createElement('div');
 		const pokemonImage = document.createElement('img');
 		const pokemonName = document.createElement('span');
-		const pokemonHeight = document.createElement('span');
-		const pokemonWeight = document.createElement('span');
-		pokemonHeight.textContent = pokemon.height;
-		pokemonWeight.textContent = pokemon.weight;
+		const pokemonDescription = document.createElement('span');
+
+		pokemonDescription.textContent = pokemon.descriptions;
 
 		pokemonName.textContent = pokemon.name;
 
@@ -41,7 +42,8 @@ export function displayPokemonList(pokemonList) {
 		});
 
 		pokemonEl.appendChild(pokemonName);
-		pokemonEl.addEventListener('click', () => {
+		pokemonEl.appendChild(pokemonDescription);
+		pokemonImage.addEventListener('click', () => {
 			selectPokemon(pokemon);
 		});
 		pokemonListElement.appendChild(pokemonEl);
