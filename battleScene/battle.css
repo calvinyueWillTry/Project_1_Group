@@ -11,7 +11,9 @@
 }
 
 body {
-	background-color: var(--white_color);
+	/*background-image: url(battlescene.jpeg);  */
+	background-size: cover;
+	background-repeat: no-repeat;
 	color: #333;
 	font-family: 'Press Start 2P', system-ui;
 	font-size: 1.5em;
