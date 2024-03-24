@@ -1,24 +1,26 @@
+/** @format */
+
 .audio {
-    display: none;
+	display: none;
 }
 
 body {
-    display: flex;
-    min-height: calc(100vh-64px);
-    flex-direction: column;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    background-image: url("img/ash.jpeg");
-    background-repeat: no-repeat cover;
-    background-size: cover;
-    background-position: center;
+	display: flex;
+	min-height: calc(100vh-64px);
+	flex-direction: column;
+	font-family: 'Inter', sans-serif;
+	font-optical-sizing: auto;
+	background-image: url('img/ash.jpeg');
+	background-repeat: no-repeat cover;
+	background-size: cover;
+	background-position: center;
 }
 
 main {
-    flex: 1 0 auto;
-    height: calc(100vh - 128px - 100px);
-    /* subtract the height of the navbar */
-    overflow: auto;
+	flex: 1 0 auto;
+	height: calc(100vh - 128px - 100px);
+	/* subtract the height of the navbar */
+	overflow: auto;
 }
 
 /*
@@ -26,135 +28,165 @@ main {
 nav bar attributes referenced from W3Schools
 */
 .nav-extended {
-    position: sticky;
-    flex-wrap: wrap;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background: url(img/navbar.png) no-repeat center / cover;
-    background-color: rgba(255, 255, 255, 0.7);
+	position: sticky;
+	flex-wrap: wrap;
+	top: 0;
+	z-index: 100;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	background: url(img/navbar.png) no-repeat center / cover;
+	background-color: rgba(255, 255, 255, 0.7);
 }
 
 .nav-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* Center vertically */
-    margin: 0 auto;
-    padding: 0 15px;
-    flex-wrap: wrap;
-    /* Allow items to wrap */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* Center vertically */
+	margin: 0 auto;
+	padding: 0 15px;
+	flex-wrap: wrap;
+	/* Allow items to wrap */
 }
 
 .nav-content {
-    flex-wrap: wrap;
-    display: flex;
-    align-items: center;
-    /* Center vertically */
+	flex-wrap: wrap;
+	display: flex;
+	align-items: center;
+	/* Center vertically */
 }
 
 .nav-title-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    /* Allow the title to grow to take available space */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	/* Allow the title to grow to take available space */
 }
-
+@keyframes example {
+	0% {
+		color: rgb(37, 150, 190);
+	}
+	25% {
+		color: yellow;
+	}
+	50% {
+		color: red;
+	}
+	100% {
+		color: green;
+	}
+}
 .nav-title {
-    font-family: 'Press Start 2P';
-    text-decoration: none;
-    color: rgb(37, 150, 190);
-    text-shadow: black 5px;
-    font-weight: bold;
-    font-size: 1.5rem;
-    /* Adjust font size */
+	font-family: 'Press Start 2P';
+	text-decoration: none;
+	color: rgb(37, 150, 190);
+	text-shadow: black 5px;
+	font-weight: bold;
+	font-size: 1.5rem;
+	/* Adjust font size */
 }
 
 .btn-floating {
-    background-image: url(img/ball.png);
-    background-size: contain;
-    background-position: center center;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-    margin: 0;
-    padding: 0;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+	background-image: url(img/ball.png);
+	background-size: contain;
+	background-position: center center;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+	color: white;
+	margin: 0;
+	padding: 0;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 a.brand-logo {
-    display: flex;
-    font-size: 2rem inherit;
-    /* maybe remove inherit */
-    text-decoration: none;
-    flex-direction: left;
-    font-family: 'Bungee';
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.8);
-    border-radius: 5px;
+	display: flex;
+	font-size: 2rem inherit;
+	/* maybe remove inherit */
+	text-decoration: none;
+	text-align: center;
+	flex-direction: left;
+	font-family: 'Bungee';
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.8);
+	border-radius: 5px;
 }
 
 .right {
-    justify-content: flex-end;
-    list-style-type: none;
-    display: flex;
+	justify-content: flex-end;
+	list-style-type: none;
+	display: flex;
 }
 
 .right li {
-    margin: 0 10px;
+	margin: 0 10px;
 }
 
 .right a {
-    color: #333;
-    text-decoration: none;
+	color: #333;
+	text-decoration: none;
 }
 
 header {
-    height: 100px;
-    /* specify a fixed height */
-    width: 100%;
-    /* specify a fixed width */
-    display: flex;
-    align-items: center;
-    /* center the content vertically */
-    justify-content: center;
-    /* center the content horizontally */
+	height: 100px;
+	/* specify a fixed height */
+	width: 100%;
+	/* specify a fixed width */
+	display: flex;
+	align-items: center;
+	/* center the content vertically */
+	justify-content: center;
+	/* center the content horizontally */
 }
 
 .titleText {
-    display: inline-block;
-    /* make the <div> an inline-block element */
+	display: inline-block;
+	/* make the <div> an inline-block element */
 }
 
 .pokemon-text {
-    display: block auto;
-    text-align: center;
-    animation: blinker 2s step-start infinite;
-    align-items: center;
-    color: #F6E652;
-    font-family: 'Pokemon Solid', sans-serif;
-    font-size: 5rem;
+	display: block auto;
+	text-align: center;
+	animation: blinker 2s step-start infinite;
+	align-items: center;
+	color: #f6e652;
+	font-family: 'Pokemon Solid', sans-serif;
+	font-size: 5rem;
 }
 
 @keyframes blinker {
-    3% {
-        opacity: 0;
-    }
+	3% {
+		opacity: 0;
+	}
 }
 
 .page-footer {
-    background-color: rgba(0, 0, 0, 0.25);
-    padding: 5px 0;
-    color: #fff;
+	background-color: rgba(0, 0, 0, 0.25);
+	padding: 5px 0;
+	color: #fff;
+}
+h5.white-text {
+	font-family: 'Pokemon Solid', sans-serif;
 }
 
-h5.white-text {
-    font-family: 'Pokemon Solid', sans-serif;
+.footer-links {
+	font-family: 'Bungee';
+}
+.footer-links ul li a {
+	text-decoration: none;
+	color: white;
+	padding: 2px;
+	margin-right: 10px;
+	transition: all 0.5s ease;
+}
+.footer-links ul li a:hover {
+	background-color: white;
+	color: black;
+	box-shadow: 0 0 2px white;
+	border-radius: 3px;
 }
 
 /*
@@ -162,36 +194,36 @@ h5.white-text {
 */
 /* For smaller devices like smartphones */
 @media only screen and (max-width: 600px) {
-    .nav-wrapper {
-        flex-direction: column;
-        /* Stack items vertically */
-        align-items: stretch;
-        /* Stretch items to fill the container */
-        padding: 10px;
-        /* Adjust padding */
-    }
+	.nav-wrapper {
+		flex-direction: column;
+		/* Stack items vertically */
+		align-items: stretch;
+		/* Stretch items to fill the container */
+		padding: 10px;
+		/* Adjust padding */
+	}
 
-    .nav-title-container {
-        order: 1;
-        /* Move title container to the top */
-        margin-bottom: 10px;
-        /* Add margin for separation */
-    }
+	.nav-title-container {
+		order: 1;
+		/* Move title container to the top */
+		margin-bottom: 10px;
+		/* Add margin for separation */
+	}
 
-    .nav-content {
-        order: 2;
-        /* Move content to the bottom */
-        justify-content: center;
-        /* Center content horizontally */
-    }
+	.nav-content {
+		order: 2;
+		/* Move content to the bottom */
+		justify-content: center;
+		/* Center content horizontally */
+	}
 
-    .nav-title {
-        font-size: 1.2rem;
-        /* Adjust font size */
-    }
+	.nav-title {
+		font-size: 1.2rem;
+		/* Adjust font size */
+	}
 }
 
 /* For tablets and larger devices */
 @media only screen and (min-width: 601px) {
-    /* Add any specific styles for tablets and larger devices here */
+	/* Add any specific styles for tablets and larger devices here */
 }

@@ -11,7 +11,6 @@ import {
 	foePokemon,
 	hpPlayerTotal,
 } from './attacks.js';
-
 $(document).ready(() => {
 	$('.player .level').text(playerLevel);
 	$('.player .hp').text(hpPlayerTotal);
@@ -20,7 +19,6 @@ $(document).ready(() => {
 	$('#move0').html('TACKLE');
 	$('#move1').html('TAIL WHIP');
 	$('#move2').html('-');
-
 	$('.foe .level').text(playerLevel);
 	$('.foe .name').text(foePokemon.name.toUpperCase());
 
