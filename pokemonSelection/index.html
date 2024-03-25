@@ -1,72 +1,200 @@
 <!-- @format -->
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<link href="https://fonts.googleapis.com/css?family=Freckle+Face:regular" rel="stylesheet" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-		<link rel="stylesheet" href="pokemon.css"/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Freckle+Face:regular"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+		<link rel="stylesheet" href="pokemon.css" />
 	</head>
 	<body>
+		<audio id="pokeAudio" autoplay loop>
+			<source type="audio/mpeg" src="../sfx/Lake Pokémon Diamond and Pearl Music.mp3" />
+		</audio>
 		<header id="titleSelect" class="titleSelection">
 			Please select your Pokémon below (maximum 6)
 		</header>
+		<div>
+			<p>List of Pokémon Available (and their description)</p>
+
+		</div>
 		<div id="pokemon-list">
-			<img id="poke-img" alt="" />
+			<img id="pok-img" alt="" />
 		</div>
 		<main>
-			<!--Stores sprite src in local storage  -->
 			<div>
-				<label>
-					<input type="radio" id="pokemon1" name="pocketMonster1" />
-					<img id="poke1-img" alt="" />
-					<h5 id="poke1-name" alt=""></h5>
-					<p id="poke1-slot" class="poke1-select">Pokémon #1</p>
+				<label id="1" class="pokemonster">
+					
+					<img id="poke-img1" alt="" />
+					<h5 id="poke-name1" alt=""></h5>
+					<div id="pokeDescription1"></div>
 				</label>
-				<label>
-					<input type="radio" id="pokemon2" name="pocketMonster2" />
-					<img id="poke2-img" alt="" />
-					<h5 id="poke2-name" alt=""></h5>
-					<p id="poke2-slot" class="poke2-select">Pokémon #2</p>
-				</label>
-				<label>
-					<input type="radio" id="pokemon3" name="pocketMonster3" />
-					<img id="poke3-img" alt="" />
-					<h5 id="poke3-name" alt=""></h5>
-					<p id="poke3-slot" class="poke3-select">Pokémon #3</p>
+			</div>	
+			<div>
+				<label id="2" class="pokemonster">
+					
+					<img id="poke-img2" alt="" />
+					<h5 id="poke-name2" alt=""></h5>
+					<p id="pokeDescription2"></p>
 				</label>
 			</div>
 			<div>
-				<label>
-					<input type="radio" id="pokemon4" name="pocketMonster4" />
-					<img id="poke4-img" alt="" />
-					<h5 id="poke4-name" alt=""></h5>
-					<p id="poke4-slot" class="poke4-select">Pokémon #4</p>
+				<label id="3" class="pokemonster">
+					
+					<img id="poke-img3" alt="" />
+					<h5 id="poke-name3" alt=""></h5>
+					<p id="pokeDescription3"></p>
 				</label>
 			</div>
 			<div>
-				<label>
-					<input type="radio" id="pokemon5" name="pocketMonster5" />
-					<img id="poke5-img" alt="" />
-					<h5 id="poke5-name" alt=""></h5>
-					<p id="poke5-slot" class="poke5-select">Pokémon #5</p>
+				<label id="4" class="pokemonster">
+					
+					<img id="poke-img4" alt="" />
+					<h5 id="poke-name4" alt=""></h5>
+					<p id="pokeDescription4"></p>
 				</label>
 			</div>
 			<div>
-				<label>
-					<input type="radio" id="pokemon6" name="pocketMonster6" />
-					<img id="poke-img" alt="" />
-					<h5 id="poke6-name" alt=""></h5>
-					<p id="poke6-slot" class="poke6-select">Pokémon #6</p>
+				<label id="5" class="pokemonster">
+					
+					<img id="poke-img5" alt="" />
+					<h5 id="poke-name5" alt=""></h5>
+					<p id="pokeDescription5"></p>
+				</label>
+			</div>
+			<div>
+				<label id="6" class="pokemonster">
+					
+					<img id="poke-img6" alt="" />
+					<h5 id="poke-name6" alt=""></h5>
+					<p id="pokeDescription6"></p>
+				</label>
+			</div>
+			<div>
+				<label id="7" class="pokemonster">
+					
+					<img id="poke-img7" alt="" />
+					<h5 id="poke6-name7" alt=""></h5>
+					<p id="pokeDescription7"></p>
+				</label>
+			</div>
+			<div>
+				<label id="8" class="pokemonster">
+					
+					<img id="poke-img8" alt="" />
+					<h5 id="poke-name8" alt=""></h5>
+					<p id="pokeDescription8"></p>
+				</label>
+			</div>
+			<div>
+				<label id="9" class="pokemonster">
+					
+					<img id="poke-img9" alt="" />
+					<h5 id="poke-name9" alt=""></h5>
+					<p id="pokeDescription9"></p>
+				</label>
+			</div>
+			<div>
+				<label id="10" class="pokemonster">
+					
+					<img id="poke-img10" alt="" />
+					<h5 id="poke-name10" alt=""></h5>
+					<p id="pokeDescription10"></p>
+				</label>
+			</div>
+			<div>
+				<label id="11" class="pokemonster">
+					
+					<img id="poke-img11" alt="" />
+					<h5 id="poke-name11" alt=""></h5>
+					<p id="pokeDescription11"></p>
+				</label>
+			</div>
+			<div>
+				<label id="12" class="pokemonster">
+					
+					<img id="poke-img12" alt="" />
+					<h5 id="poke-name12" alt=""></h5>
+					<p id="pokeDescription12"></p>
+				</label>
+			</div>
+			<div>
+				<label id="13" class="pokemonster">
+					
+					<img id="poke-img13" alt="" />
+					<h5 id="poke6-name13" alt=""></h5>
+					<p id="pokeDescription13"></p>
+				</label>
+			</div>
+			<div>
+				<label id="14" class="pokemonster">
+					
+					<img id="poke-img14" alt="" />
+					<h5 id="poke-name14" alt=""></h5>
+					<p id="pokeDescription14"></p>
+				</label>
+			</div>
+			<div>
+				<label id="15" class="pokemonster">
+					
+					<img id="poke-img15" alt="" />
+					<h5 id="poke-name15" alt=""></h5>
+					<p id="pokeDescription15"></p>
+				</label>
+			</div>
+			<div>
+				<label id="16" class="pokemonster">
+					
+					<img id="poke-img16" alt="" />
+					<h5 id="poke-name16" alt=""></h5>
+					<p id="pokeDescription16"></p>
+				</label>
+			</div>
+			<div>
+				<label id="17" class="pokemonster">
+					
+					<img id="poke-img17" alt="" />
+					<h5 id="poke-name17" alt=""></h5>
+					<p id="pokeDescription17"></p>
+				</label>
+			</div>
+			<div>
+				<label id="18" class="pokemonster">
+					
+					<img id="poke-img18" alt="" />
+					<h5 id="poke-name18" alt=""></h5>
+					<p id="pokeDescription18"></p>
+				</label>
+			</div>
+			<div>
+				<label id="19" class="pokemonster">
+					
+					<img id="poke-img19" alt="" />
+					<h5 id="poke-name19" alt=""></h5>
+					<p id="pokeDescription19"></p>
+				</label>
+			</div>
+			<div>
+				<label id="20" class="pokemonster">
+					
+					<img id="poke-img20" alt="" />
+					<h5 id="poke-name20" alt=""></h5>
+					<p id="pokeDescription20"></p>
 				</label>
 			</div>
 		</main>
+	<footer>
 		<div class="nav-content">
 			<div class="nav-title-container">
-				<a href="../battleScene/index.html" class="nav-title">BATTLE NOW!</a>
+				<button>
+					<a href="../battleScene/index.html" class="nav-title">BATTLE NOW!</a>
+				</button>
 			</div>
 			<div class="nav-title-container">
 				<a href="../index.html" class="nav-title">
@@ -74,6 +202,7 @@
 				</a>
 			</div>
 		</div>
+	</footer>
 		<script src="../js/index.js" type="module"></script>
 	</body>
 </html>
