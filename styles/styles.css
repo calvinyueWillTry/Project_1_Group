@@ -1,4 +1,5 @@
-/* @format */
+/** @format */
+
 .audio {
 	display: none;
 }
@@ -76,14 +77,13 @@ nav bar attributes referenced from W3Schools
 	}
 }
 .nav-title {
-    font-family: 'Press Start 2P';
-    text-decoration: none;
-    color: rgb(37, 150, 190);
-    animation-name: example;
-    animation-duration: 4s;
-    font-weight: bold;
-    font-size: 1rem;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-family: 'Press Start 2P';
+	text-decoration: none;
+	color: rgb(37, 150, 190);
+	text-shadow: black 5px;
+	font-weight: bold;
+	font-size: 1.5rem;
+	/* Adjust font size */
 }
 
 .btn-floating {
