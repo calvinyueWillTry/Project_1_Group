@@ -42,3 +42,8 @@ Then there's the title in the header, along with links in the navigation bar, as
 <img width="1280" alt="HTML mainpage 2" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/768e9882-094a-4782-a88e-69e68acbd0b5">
 At the footer of the page is a link to our Github page, and a link to change to the Pokemon selection page, as well as sourcing the JS page for this.
 <img width="1280" alt="HTML mainpage 3" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/d739c15d-0255-4637-b4de-5dba2a7c9439">
+Pokemon Selection Page: We start with the title in the header, and that's followed by having the "pokemon-list" and "pok-img" to get the Pokemon pictures from the API (in the JS). Then the list of hard-coded spots for allowing the Pokemon to appear on the page are below. 
+<img width="1280" alt="HTML Pokemon Selection 1 " src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/71191dc5-305d-46a1-91b8-32e9cb7bfb7b">
+Every spot for the Pokemon is also hard-coded with an element for the <div> section,  A place on the page for the image, name and description. Because it's an array, the array is also hard-coded, albeit from 1-20 instead of 0-19. 
+At the footer, There are buttons to either navigate to the battle page, or return to the homepage.
+<img width="1280" alt="HTML Pokemon Selection 2" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/4ea483fc-3b8d-477c-9c63-17fb909f2d77">
