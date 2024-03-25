@@ -1,4 +1,4 @@
-/** @format */
+/* @format */
 :root {
 	--blue_color: #10397b;
 	--white_color: #fff;
@@ -12,7 +12,7 @@ body {
 	font-size: 1.5em;
 	margin: 0;
 	padding: 0;
-	line-height: 1em;
+	/*line-height: 1em; */ 
 }
 
 a {
