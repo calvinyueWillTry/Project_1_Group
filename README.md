@@ -47,3 +47,12 @@ Pokemon Selection Page: We start with the title in the header, and that's follow
 Every spot for the Pokemon is also hard-coded with an element for the <div> section,  A place on the page for the image, name and description. Because it's an array, the array is also hard-coded, albeit from 1-20 instead of 0-19. 
 At the footer, There are buttons to either navigate to the battle page, or return to the homepage.
 <img width="1280" alt="HTML Pokemon Selection 2" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/4ea483fc-3b8d-477c-9c63-17fb909f2d77">
+HTML BattlePage: With a font and CSS style, as well as the autoplay loop audio track. For the Pokemon <div>, within "layer foe," there's "info" for the opponent's Pokemon's name, level and HP, and the "image" for the Eevee.
+For the "layer player," it starts with the "images" section, first the player's trainer, then switches to their Pokemon.
+<img width="1280" alt="HTML Battle 1" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/ce9093d4-338f-4a19-837f-15341cc1f04d">
+Under "windows," there are window texts to establish fonts, then the "button," which are as follows under "window menu:" "window fight" 4 buttons; "window item" potion (hit points) or cancel, "PKMN" to select other Pokemon, and "Run" to display a message.
+<img width="1280" alt="HTML Battle 2" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/0e8e014d-cea1-4d1b-a039-df3e57fdca25">
+<img width="1280" alt="HTML Battle 3" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/35db5980-b68e-43f2-b119-355cc081d32a">
+<img width="1280" alt="HTML Battle 4" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/7067ec9e-2c9c-4f16-aab6-588010a9ffa8">
+Underneath those, there is also a button to "Return" to the homepage. In addition, there are sources for the jQuery, audio volume level control, and the JS.
+<img width="1280" alt="HTML Battle 5" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/d342f54a-c06b-4a01-907f-9caf738a26e2">
