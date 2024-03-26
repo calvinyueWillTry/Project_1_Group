@@ -147,6 +147,13 @@ header {
 	/* make the <div> an inline-block element */
 }
 
+.start {
+	text-align: center;
+	text-decoration: none;
+	padding: 0.5em;
+	border-radius: 0.5em;
+}
+
 .pokemon-text {
 	display: block auto;
 	text-align: center;
