@@ -14,10 +14,11 @@ This is a pokemon selection and battle site that uses pokeApi, Javascript, CSS, 
 - [Deployed Application](#deployed-application)
 - [Screenshot](#screenshot)
 - [License](#license)
+- [HTML](#html)
 
 ## Installation
 
-No installation required. You can access the application by clicking on the following link: [Pokemon Online](https://github.com/calvinyueWillTry/Project_1_Group)x
+No installation required. You can access the application by clicking on the following link: [Pokemon Online](https://github.com/calvinyueWillTry/Project_1_Group)
 
 ## Usage
 
@@ -36,15 +37,16 @@ The deployed application can be accessed by clicking on the following link: [Pok
 MIT License
 
 ## HTML
-Mainpage: We start with the head, and then the links that we are using for everything, from fonts to CSS. At the top of the page, we added links to the Battle and Pokemon selection pages (the pokeball). 
+
+Mainpage: We start with the head, and then the links that we are using for everything, from fonts to CSS. At the top of the page, we added links to the Battle and Pokemon selection pages (the pokeball).
 <img width="1280" alt="HTML mainpage 1 " src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/40caca0d-e118-47ca-a193-ca5a97f79a53">
-Then there's the title in the header, along with links in the navigation bar, as well as the audio in an autoplay loop. We also added the links to the API links that we used for this project as "resources and credits." 
+Then there's the title in the header, along with links in the navigation bar, as well as the audio in an autoplay loop. We also added the links to the API links that we used for this project as "resources and credits."
 <img width="1280" alt="HTML mainpage 2" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/768e9882-094a-4782-a88e-69e68acbd0b5">
 At the footer of the page is a link to our Github page, and a link to change to the Pokemon selection page, as well as sourcing the JS page for this.
 <img width="1280" alt="HTML mainpage 3" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/d739c15d-0255-4637-b4de-5dba2a7c9439">
-Pokemon Selection Page: We start with the title in the header, and that's followed by having the "pokemon-list" and "pok-img" to get the Pokemon pictures from the API (in the JS). Then the list of hard-coded spots for allowing the Pokemon to appear on the page are below. 
+Pokemon Selection Page: We start with the title in the header, and that's followed by having the "pokemon-list" and "pok-img" to get the Pokemon pictures from the API (in the JS). Then the list of hard-coded spots for allowing the Pokemon to appear on the page are below.
 <img width="1280" alt="HTML Pokemon Selection 1 " src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/71191dc5-305d-46a1-91b8-32e9cb7bfb7b">
-Every spot for the Pokemon is also hard-coded with an element for the <div> section,  A place on the page for the image, name and description. Because it's an array, the array is also hard-coded, albeit from 1-20 instead of 0-19. 
+Every spot for the Pokemon is also hard-coded with an element for the <div> section, A place on the page for the image, name and description. Because it's an array, the array is also hard-coded, albeit from 1-20 instead of 0-19.
 At the footer, There are buttons to either navigate to the battle page, or return to the homepage.
 <img width="1280" alt="HTML Pokemon Selection 2" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/4ea483fc-3b8d-477c-9c63-17fb909f2d77">
 HTML BattlePage: With a font and CSS style, as well as the autoplay loop audio track. For the Pokemon <div>, within "layer foe," there's "info" for the opponent's Pokemon's name, level and HP, and the "image" for the Eevee.

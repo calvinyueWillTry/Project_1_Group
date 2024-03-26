@@ -11,15 +11,12 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-	<link rel="stylesheet" href="./styles/styles.css" />
 	<link rel="stylesheet" href="./styles/reset.css" />
 	<link rel="stylesheet" href="./styles/styles.css" />
-	<link rel="stylesheet" href="./styles/reset.css" />
 </head>
 <nav class="nav-extended">
 	<div class="nav-wrapper">
 		<ul class="right hide-on-med-and-down">
-			<!-- Do we want these? <li><a href="https://github.com/calvinyueWillTry/Project_1_Group" class="brand-logo">Our GitHub</a></li>-->
 			<li><a href="#">Sources</a></li>
 			<li><a href="#">About Us</a></li>
 		</ul>
@@ -40,9 +37,6 @@
 </header>
 <body>
 	<main>
-		<audio autoplay loop>
-			<source type="audio/mpeg" src="./sfx/battle_lower.mp3" />
-	   </audio>
 	<footer class="page-footer center">
 		<div class="container">
 			<div class="row">
@@ -62,17 +56,11 @@
 				<a class="grey-text text-lighten-4 center footer-links" href="https://github.com/calvinyueWillTry/Project_1_Group">Our GitHub</a>
 			</div>
 		</div>
+		<button id="begin" class="start">
+		<a href="./pokemonSelection/index.html">Select your Pokémon!
+		</a>
+	</button>
 	</footer>
-		<footer>
-			<button id="begin" class="start">
-			<a href="./pokemonSelection/index.html">Select your Pokémon!
-			</a>
-		</button>
-		</footer>
-		<script>
-			var audio = document.getElementById('pokeAudio');
-			audio.volume = 0.6;
-		</script>
 		<script src="./js/index.js" type="module"></script>
 	</body>
 	</main>
