@@ -2,7 +2,6 @@
 // Starting index (the first Pokémon, which is bulbasaur:3)
 let index = 1;
 // Api for in-game sprites
-//const battleSpriteUrl = `https://www.pokencyclopedia.info/sprites/gen1/spr_red-blue_gb/spr_rb-gb_${index}.png`;
 const pokemonDescribeURL = `https://pokeapi.co/api/v2/characteristic/${index}/`;
 // This function fetches the sprite for a Pokémon
 export function fetchPokemonSprite(pokemonId) {
@@ -75,10 +74,15 @@ export async function fetchPokemonList() {
 			console.log('Error fetching Pokémon list:', error);
 		});
 }
+
 // Stores the users selected Pokémon in local storage
 export function selectPokemon(pokemonIndex) {
 	console.log('this is not working', pokemonIndex);
 	localStorage.setItem('selectedPokemonIndex', JSON.stringify(pokemonIndex));
 	console.log('Selected Pokémon Index:', pokemonIndex);
-	window.location.href = '/battleScene/index.html';
+	if (window.location.include('pokemonSimulator')) {
+		window.location.href = '/pokemonSimulator/battleScene/index.html';
+	} else {
+		window.location.href = '/battleScene/index.html';
+	}
 }
