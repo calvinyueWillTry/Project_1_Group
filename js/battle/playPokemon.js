@@ -35,7 +35,7 @@ export const playPokemon = () => {
 			$('.trainer, .balls').show();
 			window.setTimeout(() => {
 				$('.text1').text(`${foe.toUpperCase()} wants`);
-				$('.text2').text('to fight!');
+				$('.text2').text(' to fight!');
 				typingAnim();
 				window.setTimeout(() => {
 					$('.balls').hide();

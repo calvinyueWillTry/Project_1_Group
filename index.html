@@ -1,8 +1,6 @@
 <!-- @format -->
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,44 +9,34 @@
 	<link href="https://fonts.googleapis.com/css?family=Bungee:regular" rel="stylesheet" />
 	<link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
-	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-	<link rel="stylesheet" href="./styles/styles.css" />
 	<link rel="stylesheet" href="./styles/reset.css" />
+	<link rel="stylesheet" href="./styles/styles.css" />
 </head>
-
 <nav class="nav-extended">
 	<div class="nav-wrapper">
 		<ul class="right hide-on-med-and-down">
-			<li><a href="https://github.com/calvinyueWillTry/Project_1_Group" class="brand-logo">Our GitHub</a></li>
 			<li><a href="#">Sources</a></li>
 			<li><a href="#">About Us</a></li>
 		</ul>
 	</div>
 	<div class="nav-content">
-		<div class="nav-title-container"> <!--fixed the link for both to be able to go into battle in my file-->
+		<div class="nav-title-container"> 
 			<a href="./battleScene/index.html" class="nav-title">BATTLE NOW!</a>
 	</div>
-		<!-- red pokeball button which also goes to battle -->
 		<a href="./pokemonSelection/index.html">
 		<button class="btn-floating btn-large halfway-fab waves-effect waves-light red"></button>
 		</a>	
 	</div>
 </nav>
-
 <header>
 	<div class="titleText">
 		<span><a class="pokemon-text">Pokémon</a></span>
 	</div>
 </header>
-
 <body>
 	<main>
-		<audio autoplay loop>
-			<source type="audio/mpeg" src="./sfx/lanceBattle_lower.mp3" />
-	   </audio>
-		<!--JavaScript at end of body for optimized loading-->
 	<footer class="page-footer center">
 		<div class="container">
 			<div class="row">
@@ -68,17 +56,11 @@
 				<a class="grey-text text-lighten-4 center footer-links" href="https://github.com/calvinyueWillTry/Project_1_Group">Our GitHub</a>
 			</div>
 		</div>
+		<button id="begin" class="start">
+		<a href="./pokemonSelection/index.html">Select your Pokémon!
+		</a>
+	</button>
 	</footer>
-		<footer>
-			<button id="begin" class="start">
-			<a href="./pokemonSelection/index.html">Select your Pokémon!
-			</a>
-		</button>
-		</footer>
-		<script>
-			var audio = document.getElementById('pokeAudio');
-			audio.volume = 0.6;
-		</script>
 		<script src="./js/index.js" type="module"></script>
 	</body>
 	</main>
