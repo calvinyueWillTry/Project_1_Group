@@ -31,7 +31,6 @@ export function displayPokemonList(pokemonList) {
 			})
 			.then((description) => {
 				//return object
-				console.log(description.descriptions[7]);
 				const pokemonId = pokemon.url.split('/')[6];
 				let i = index+1;
 				// This calls for pokemon 1-20 (limit 6)
