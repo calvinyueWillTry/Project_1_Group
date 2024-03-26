@@ -58,3 +58,10 @@ Under "windows," there are window texts to establish fonts, then the "button," w
 <img width="1280" alt="HTML Battle 4" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/7067ec9e-2c9c-4f16-aab6-588010a9ffa8">
 Underneath those, there is also a button to "Return" to the homepage. In addition, there are sources for the jQuery, audio volume level control, and the JS.
 <img width="1280" alt="HTML Battle 5" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/d342f54a-c06b-4a01-907f-9caf738a26e2">
+JS PokemonSprite: We sourced from 2 API sources: https://pokeapi.co/api/v2/characteristic/ and https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork.png.
+We then first fetch and return the blob from array and sprites.
+<img width="1280" alt="JS PokemonSprite 1" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/44613010-5e69-434a-aa93-348df6aab828">
+Next, we fetch the elements for the Pokemon, including name, image, and description, all of which has to be indexed (some hard-coded into the HTML page instead), to align in sequential order.
+<img width="1280" alt="JS PokemonSprite 2" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/a335d6c7-d476-4f4e-b8ee-d7b052c9afe6">
+In addition, there are if statements when there are errors that occur when aligning and/or selecting the Pokemon. 
+<img width="1280" alt="JS PokemonSprite 3" src="https://github.com/calvinyueWillTry/Project_1_Group/assets/158237430/afef0696-1202-4b0a-ae5f-5326875ba2c6">
